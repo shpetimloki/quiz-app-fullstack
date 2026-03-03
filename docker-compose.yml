@@ -1,0 +1,12 @@
+version: '3.8'
+services:
+  db:
+    image: mariadb:10.11
+    restart: always
+    environment:
+      MARIADB_DATABASE: quizdb
+      MARIADB_USER: user
+      MARIADB_PASSWORD: password
+      MARIADB_ROOT_PASSWORD: root
+    ports:
+      - "3306:3306"
